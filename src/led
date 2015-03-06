@@ -1,0 +1,23 @@
+#!/bin/bash
+
+usage() {
+    echo "Usage: $0 on|off"
+    exit
+}
+
+if [[ $# -lt 1 ]]
+then
+    usage
+fi
+
+if [[ $1 == "on" ]]
+then
+    gpio mode 0 out
+    gpio write 0 1
+elif [[ $1 == "off" ]]
+then
+    gpio mode 0 out
+    gpio write 0 0
+else
+    usage
+fi

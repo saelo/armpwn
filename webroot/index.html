@@ -1,0 +1,17 @@
+<html>
+  <title>RPI Control</title>
+<body>
+   <script>
+function get(url)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+    return;
+}
+</script>
+   <h1>RPI Control Center</h1>
+   <button type="button" onclick="get('ledon');">Turn LED on</button> 
+   <button type="button" onclick="get('ledoff');">Turn LED off</button> 
+</body>
+</html>
