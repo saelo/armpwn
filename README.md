@@ -1,10 +1,10 @@
-#ARMPwn
+# ARMPwn
 
 Repository to train/learn memory corruption exploitation on the ARM platform.
 This is the material of a workshop I prepared for my CTF Team.
 
 
-##Quick Setup
+## Quick Setup
 
 Either upload the binary to some ARM device (I used a Raspberry Pi) or use qemu locally as described [here](https://github.com/niklasb/rpi-qemu).
 Also copy the webroot/ folder and the led script to the device. The binary expects both to be in the current working directory.
@@ -12,29 +12,29 @@ Also copy the webroot/ folder and the led script to the device. The binary expec
 The binary needs to be run as root or (preferably) have CAP_NET_BIND_SERVICE enabled (sudo setcap 'cap_net_bind_service=+ep' websrv).
 
 
-##How to use this Repository
+## How to use this Repository
 
 In general the goal is to get code execution on the target system.
 There are 4 different ways to benefit from this repository:
 
-###Total Pwn
+### Total Pwn
 
 Deploy the binary and go pwn it _without_ reversing the binary first. Assume no prior knowlege of the binary.
 
-###Full Pwn
+### Full Pwn
 
 You're given access to the binary as well (in bin/).
 
-###Medium Pwn
+### Medium Pwn
 
 You're given access to the binary and it's source code in src/. You'll miss out on some reversing fun though.
 
-###Lesser Pwn
+### Lesser Pwn
 
 Refer to the exploit and explanations in exploit/ as you go along.
 
 
-##RPI Configuration
+## RPI Configuration
 
 The RPI used during the workshop was configured as follows:
 
